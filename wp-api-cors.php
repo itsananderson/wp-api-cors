@@ -12,12 +12,36 @@
 
  class WP_Api_Cors {
 	public function __construct() {
+		add_action( 'template_redirect', array( $this, 'add_oauth_cors_headers' ), -101 );
 		add_action( 'rest_api_init', array( $this, 'remove_default_cors_headers'), 11 );
 		add_action( 'rest_api_init', array( $this, 'add_hookable_cors_headers'), 20 );
+		add_action( 'login_form_oauth1_authorize', array( $this, 'add_external_host_filter' ), 0 );
 	}
 
 	public function remove_default_cors_headers() {
 		remove_filter( 'rest_pre_serve_request', 'rest_send_cors_headers' );
+	}
+
+	public function add_oauth_cors_headers() {
+		if ( empty( $GLOBALS['wp']->query_vars['json_oauth_route'] ) ) {
+			return;
+		}
+
+		$this->send_cors_headers();
+
+		// Oauth1 plugin doesn't gracefully handle OPTIONS requests
+		// So we short-circuit and just return headers with an empty response
+		if ( 'OPTIONS' === $_SERVER['REQUEST_METHOD'] ) {
+			die();
+		}
+	}
+
+	public function add_external_host_filter() {
+		add_filter( 'http_request_host_is_external', array( $this, 'allow_local_oauth_callback' ), 100 );
+	}
+
+	public function allow_local_oauth_callback() {
+		return true;
 	}
 
 	public function add_hookable_cors_headers() {
