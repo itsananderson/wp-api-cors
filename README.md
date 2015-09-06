@@ -26,6 +26,8 @@ Hooks
 
 The following hooks and can be used to extend the default functionality
 
+`cors_origin_disallowed`: Called if an origin is provided that is not in the list of allowed origins
+
 
 Filters
 ---
