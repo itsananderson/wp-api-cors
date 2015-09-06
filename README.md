@@ -58,7 +58,7 @@ The following filters can be used to extend the default functionality
 
 `cors_exposed_headers`: Array of exposed headers. Defaults to `array( 'X-WP-Total', 'X-WP-TotalPages' )`.
 
-`cors_expose_headers_value': String created by imploding the values returned from the `cors_exposed_headers` filter, separated by `', '`.
+`cors_expose_headers_value`: String created by imploding the values returned from the `cors_exposed_headers` filter, separated by `', '`.
 
 `cors_max_age_value`: Integer value of the 'Access-Control-Max-Age' header. Defaults value is 600 (ten minutes), but by default this header is not sent.
 
