@@ -20,3 +20,14 @@ Ionic
 If you're testing an Ionic app in the browser and authenticating using oauth1, you can make it listen on port 8080 with:
 
 `ionic serve --lab --port 8080`
+
+Hooks
+---
+
+The following hooks and can be used to extend the default functionality
+
+
+Filters
+---
+
+The following filters can be used to extend the default functionality
