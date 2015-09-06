@@ -44,9 +44,9 @@ The following filters can be used to extend the default functionality
 
 `cors_should_send_max_age`: Should an 'Access-Control-Max-Age' header be sent? Defaults to `false`
 
-`cors_should_send_allow_methods`: Should an 'Access-Control-Allow-Methods' header be sent? Default to `true`
+`cors_should_send_allow_methods`: Should an 'Access-Control-Allow-Methods' header be sent? Defaults to `true`
 
-`cors_should_send_allow_headers`: Should an 'Access-Control-Allow-Headers' header be sent? Default to `true`
+`cors_should_send_allow_headers`: Should an 'Access-Control-Allow-Headers' header be sent? Defaults to `true`
 
 ### Header Values
 
