@@ -48,7 +48,7 @@ The following filters can be used to extend the default functionality
 
 `cors_should_send_allow_headers`: Should an `Access-Control-Allow-Headers` header be sent? Default to `true`.
 
-# Header Values
+### Header Values
 
 `cors_allowed_origins`: Array of allowed origins. Defaults to `array( $origin )` (effectively a wildcard).
 
