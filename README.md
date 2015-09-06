@@ -52,7 +52,7 @@ The following filters can be used to extend the default functionality
 
 `cors_allowed_origins`: Array of allowed origins. Defaults to `array( $origin )` (effectively a wildcard).
 
-`cors_allow_origin_value`: String value of the 'Access-Control-Allow-Origin` header. Defaults is `$origin`. Result will be escaped by `esc_url_raw` before being sent.
+`cors_allow_origin_value`: String value of the 'Access-Control-Allow-Origin' header. Defaults is `$origin`. Result will be escaped by `esc_url_raw` before being sent.
 
 `cors_allow_credentials_value`: String value of the 'Access-Control-Allow-Credentials' header. Defaults to `'true'`, but by default this header is not sent.
 
