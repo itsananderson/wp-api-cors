@@ -82,7 +82,7 @@
 
 		if ( $should_send_allow_methods ) {
 			$allowed_methods = apply_filters( 'cors_allowed_methods', array( 'POST', 'GET', 'OPTIONS', 'PUT', 'DELETE' ) );
-			header( 'Acess-Control-Allow-Methods: ' . apply_filters( 'cors_allow_methods_value', implode( ', ', $allowed_methods ) ) );
+			header( 'Access-Control-Allow-Methods: ' . apply_filters( 'cors_allow_methods_value', implode( ', ', $allowed_methods ) ) );
 		}
 
 		if ( $should_send_allow_headers ) {
